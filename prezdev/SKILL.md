@@ -33,6 +33,13 @@ Adapted with additional guardrails from [Oracle's Java Code Conventions](https:/
   * Variables: `lowerCamelCase` descriptivo. Cero letras sueltas (excepto contadores de bucle triviales).
   * Constantes: `UPPER_SNAKE_CASE`.
 
+* **Nombres pronunciables:** Prefiere nombres fáciles de pronunciar en una conversación técnica; evita abreviaturas crípticas.
+* **Nombres buscables:** Prefiere nombres específicos y fáciles de localizar mediante búsquedas en el código, evitando identificadores demasiado genéricos.
+* **Sin prefijos que codifiquen el tipo:** Evita prefijos que repitan el tipo (`str`) o marquen innecesariamente campos (`m_`) e interfaces (`I`). Conserva los prefijos con significado semántico, como `is` en predicados.
+* **Vocabulario consistente:** Usa el mismo término para operaciones equivalentes; evita alternar entre sinónimos sin una diferencia real de significado. Si los comportamientos son distintos, refleja esa diferencia en los nombres.
+* **Contexto sin redundancia:** Añade contexto al nombre cuando ayude a entenderlo; evita repetir información que ya aporta la clase o el ámbito. No acortes nombres si con ello pierden claridad o facilidad de búsqueda.
+* **Fábricas nombradas:** Si el significado de los argumentos de un constructor resulta ambiguo, considera una fábrica estática con un nombre que aclare cómo se crea el objeto. No es obligatorio sustituir constructores que ya sean claros.
+
 ## 2. Estructura de Archivos y Clases
 
 * **Archivos y Paquetes:** Mantener un tipo público de nivel superior por archivo fuente (la clase/interfaz debe coincidir con el nombre del archivo). El tipo público debe declararse antes de los demás tipos de nivel superior del mismo archivo.

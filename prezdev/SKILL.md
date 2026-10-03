@@ -36,6 +36,7 @@ Adapted with additional guardrails from [Oracle's Java Code Conventions](https:/
 ## 2. Estructura de Archivos y Clases
 
 * **Archivos y Paquetes:** Mantener un tipo público de nivel superior por archivo fuente (la clase/interfaz debe coincidir con el nombre del archivo). El tipo público debe declararse antes de los demás tipos de nivel superior del mismo archivo.
+* **Separación de secciones:** Separa las secciones de un archivo fuente Java (por ejemplo, `package`, imports y declaraciones de tipos) con líneas en blanco.
 * **Orden de Imports:** Los imports deben agruparse lógicamente:
 
   1. `java.*` / `javax.*`.
@@ -50,6 +51,8 @@ Adapted with additional guardrails from [Oracle's Java Code Conventions](https:/
   2. Campos/Variables de instancia.
   3. Constructores.
   4. Métodos (aplicando la regla Top-Down).
+
+  Dentro de cada grupo de campos (estáticos y de instancia), declara primero los `public`, después los `protected` y finalmente los `private`.
 
 ## 3. Funciones y Métodos
 
@@ -89,6 +92,10 @@ Adapted with additional guardrails from [Oracle's Java Code Conventions](https:/
   * **Obligatorio:** Usar siempre llaves para estructuras de control (`if`, `else`, `for`, `while`), incluso para una sola línea.
 
 * **División de líneas largas:** Divide las líneas largas deliberadamente y evita continuaciones demasiado anidadas. Cuando una declaración o condición ocupe varias líneas, alinea las continuaciones para que el cuerpo de la sentencia siga siendo fácil de leer.
+
+  * Si divides una llamada entre argumentos, corta después de la coma.
+  * Prefiere puntos de corte en los niveles externos de una expresión y mantén juntos los grupos internos, como las expresiones entre paréntesis, cuando sea posible.
+
 * **Espaciado visual consistente:**
 
   * Una línea en blanco entre métodos y para separar bloques lógicos dentro de un método.
